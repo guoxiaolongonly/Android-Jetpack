@@ -2,8 +2,9 @@ package cn.xiaolongonly.lifecycle;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivity {
     protected T mPresenter;
@@ -15,5 +16,5 @@ public abstract class BaseActivity<T extends IPresenter> extends AppCompatActivi
         getLifecycle().addObserver(mPresenter);
     }
 
-    abstract T createPresenter();
+    protected abstract T createPresenter();
 }

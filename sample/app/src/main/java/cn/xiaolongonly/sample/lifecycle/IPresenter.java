@@ -1,9 +1,6 @@
 package cn.xiaolongonly.lifecycle;
 
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleObserver;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.OnLifecycleEvent;
+import androidx.lifecycle.DefaultLifecycleObserver;
 
 /**
  * <描述功能>
@@ -12,7 +9,7 @@ import android.arch.lifecycle.OnLifecycleEvent;
  * @version v1.0
  * @since 2019/3/27 11:31
  */
-public interface IPresenter extends LifecycleObserver {
+public interface IPresenter extends DefaultLifecycleObserver {
 
 //    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
 //    void onCreate(LifecycleOwner owner);
@@ -32,7 +29,7 @@ public interface IPresenter extends LifecycleObserver {
 //    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
 //    void onStop(LifecycleOwner owner);
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
-    void onLifecycleChanged(LifecycleOwner owner,
-                            Lifecycle.Event event);
+//    @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
+//    void onLifecycleChanged(LifecycleOwner owner,
+//                            Lifecycle.Event event);
 }

@@ -1,8 +1,10 @@
-package cn.xiaolongonly.lifecycle;
+package cn.xiaolongonly.sample.lifecycle;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
+import cn.xiaolongonly.lifecycle.BaseActivity;
 
 /**
  * <描述功能>
@@ -11,13 +13,13 @@ import android.util.Log;
  * @version v1.0
  * @since 2019/3/27 14:07
  */
-public class MainActivity extends BaseActivity<BasePresenter> {
-    private static final String TAG = "Lucky__"+MainActivity.class.getSimpleName();
+public class LifecycleActivity extends BaseActivity<BasePresenter> {
+    private static final String TAG = "Lucky__"+ LifecycleActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate");
+        Log.d(TAG, "onCreate-----------");
     }
 
     @Override
@@ -51,7 +53,7 @@ public class MainActivity extends BaseActivity<BasePresenter> {
     }
 
     @Override
-    BasePresenter createPresenter() {
+    protected BasePresenter createPresenter() {
         return new BasePresenter();
     }
 

@@ -4,8 +4,8 @@ ext {
 
     libsVersion = [
             // App dependencies version
-            supportLibraryVersion = '28.0.0',
-            support_v4 = '28.0.0',
+            supportLibraryVersion = '1.0.0+',
+            support_v4 = '1.0.0+',
             constraintVersion = "1.0.2",
             multidex = "1.0.2",
             paging = "1.0.0",
@@ -23,10 +23,17 @@ ext {
     ]
 
     dependencies = [
-            appcompatV7: "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion",
-            design     : "com.android.support:design:$rootProject.supportLibraryVersion",
-            recycleview: "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion",
-            support_v4 : "com.android.support:support-v4:$rootProject.support_v4",
-            paging     : "android.arch.paging:runtime:$rootProject.paging",
+            appcompatV7   : "androidx.appcompat:appcompat:$rootProject.supportLibraryVersion",
+            design        : "com.google.android.material:material:$rootProject.supportLibraryVersion",
+            recycleview   : "androidx.legacy:legacy-support-v4:$rootProject.supportLibraryVersion",
+            support_v4    : "com.google.android.material:material:$rootProject.support_v4",
+            support_comapt: "androidx.core:core:$rootProject.supportLibraryVersion",
+
+            lifecycle     : "androidx.lifecycle:lifecycle-common-java8:2.0.0",
+
+            viewModel     : "androidx.lifecycle:lifecycle-extensions:2.0.0",
+            paging        : "androidx.paging:paging-runtime:2.0.0"
+//            lifecycle           : "android.arch.lifecycle:common-java8:1.1.1",
     ]
+
 }
